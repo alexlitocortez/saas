@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { CardWithForm } from '@/components/create-account'
 
 
 
@@ -120,19 +121,7 @@ export default function Home() {
           </p>
         </a>
       </div> */}
-      <Button>HELLO</Button>
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
+      <CardWithForm />
 
     </main>
   )
