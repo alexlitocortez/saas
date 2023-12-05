@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import HomeButton from '../../components/ui/button'
-import { Button } from "@/components/ui/button"
+import HomeButton from '../../ui/button'
+import { Button } from "../components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,7 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "../components/ui/card"
+import { CardWithForm } from '../pages/create-account'
 
 
 
@@ -120,19 +121,7 @@ export default function Home() {
           </p>
         </a>
       </div> */}
-      <Button>HELLO</Button>
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
+      <CardWithForm />
 
     </main>
   )
