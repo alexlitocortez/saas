@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import HomeButton from '../../components/ui/button'
-import { Button } from "@/components/ui/button"
+import HomeButton from '../../ui/button'
+import { Button } from "../components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,8 +8,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { CardWithForm } from '@/components/create-account'
+} from "../components/ui/card"
+import { CardWithForm } from '../pages/create-account'
 
 
 
