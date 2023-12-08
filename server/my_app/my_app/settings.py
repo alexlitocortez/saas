@@ -101,6 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Replace with your Next.js development server URL
+]
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
