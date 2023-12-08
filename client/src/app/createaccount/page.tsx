@@ -31,22 +31,16 @@ export default function CreateAccount() {
                     <form>
                         <div className="grid w-full items-center gap-4">
                             <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="name">Name</Label>
-                                <Input id="name" className="text-white bg-black" placeholder="Name of your project" />
+                                <Label htmlFor="first_name">First Name</Label>
+                                <Input id="first_name" className="text-white bg-black" placeholder="First Name" />
                             </div>
                             <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="framework">Framework</Label>
-                                <Select>
-                                    <SelectTrigger id="framework" className="bg-black text-white">
-                                        <SelectValue placeholder="Select" />
-                                    </SelectTrigger>
-                                    <SelectContent position="popper">
-                                        <SelectItem value="next">Next.js</SelectItem>
-                                        <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                                        <SelectItem value="astro">Astro</SelectItem>
-                                        <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                                    </SelectContent>
-                                </Select>
+                                <Label htmlFor="last_name">Last Name</Label>
+                                <Input id="last_name" className="text-white bg-black" placeholder="Last Name" />
+                            </div>
+                            <div className="flex flex-col space-y-1.5">
+                                <Label htmlFor="password">Password</Label>
+                                <Input id="password" className="text-white bg-black" placeholder="Password" />
                             </div>
                         </div>
                     </form>
