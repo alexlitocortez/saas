@@ -5,5 +5,5 @@ from api.views import nextjs_app
 
 urlpatterns = [
     path('nextjs/', nextjs_app, name='nextjs_app'),
-    path('api/register/', register_user, name='register_user')
+    path('api/register', register_user, name='register_user')
 ]
