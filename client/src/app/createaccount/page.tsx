@@ -1,26 +1,44 @@
-import * as React from "react"
+"use client"
+
+import { useState } from "react"
 
 import { Button } from "../../components/ui/button"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
 } from "../../components/ui/card"
 import { Input } from "../../components/ui/input"
 import { Label } from "../../components/ui/label"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "../../components/ui/select"
-
 
 export default function CreateAccount() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleRegister = async () => {
+        try {
+            const response = await fetch('http://localhost:8000/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "username": username, "password": password })
+            });
+
+            if (response.ok) {
+                // Registration successful, navigate to the success page
+                window.location.href = '/welcome';
+            } else {
+                // Handle registration error
+                console.error('Registration failed:', await response.json());
+            }
+        } catch (error) {
+            console.error('An error occurred during registration:', error);
+        }
+    }
+
     return (
         <>
             <Card className="w-[350px] bg-black">
@@ -31,23 +49,18 @@ export default function CreateAccount() {
                     <form>
                         <div className="grid w-full items-center gap-4">
                             <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="first_name">First Name</Label>
-                                <Input id="first_name" className="text-white bg-black" placeholder="First Name" />
-                            </div>
-                            <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="last_name">Last Name</Label>
-                                <Input id="last_name" className="text-white bg-black" placeholder="Last Name" />
+                                <Label htmlFor="username">Username</Label>
+                                <Input id="username" className="text-white bg-black" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
                             </div>
                             <div className="flex flex-col space-y-1.5">
                                 <Label htmlFor="password">Password</Label>
-                                <Input id="password" className="text-white bg-black" placeholder="Password" />
+                                <Input id="password" className="text-white bg-black" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                             </div>
                         </div>
                     </form>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                    <Button variant="outline" className="bg-black text-white">Cancel</Button>
-                    <Button>Deploy</Button>
+                <CardFooter className="flex justify-center">
+                    <Button onClick={handleRegister}>Register</Button>
                 </CardFooter>
             </Card>
         </>
