@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@prisma/client": "^5.11.0",
     "lucide-react": "^0.359.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.11.0"
   }
 }
