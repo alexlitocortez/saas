@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import MaxWidthWrapper from '../../components/maxwidthwrapper';
+import MaxWidthWrapper from '../../components/MaxWidthWrapper';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
