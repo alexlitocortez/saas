@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import MaxWidthWrapper from "../maxwidthwrapper"
+import MaxWidthWrapper from "../MaxWidthWrapper"
 import { buttonVariants } from "./button";
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import { ArrowRight } from "lucide-react";
